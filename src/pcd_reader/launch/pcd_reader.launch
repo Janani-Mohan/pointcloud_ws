@@ -1,0 +1,7 @@
+<launch>
+    <arg name="input_file" default="/net/home/janani.mohan/test_ws/src/pcd_reader/1.pcd" />
+    <node pkg="pcd_reader" type="pcd_reader_node" name="pcd_reader" output="screen" respawn="false">
+        <param name="input_file" value="$(arg input_file)" />
+        <param name="frame_id" value="/camera_link" />
+    </node>
+</launch>
